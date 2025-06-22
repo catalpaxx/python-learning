@@ -57,5 +57,96 @@
 
 **- for 循环**：遍历可迭代对象（如列表、字典）
 
+    for i in range(5):
+    print(i)
+
 **- while 循环**：条件成立时循环执行
+
+    while x > 0:
+    x -= 1
+
+### 5. 列表与字典
+
+**- 列表**：[1, 2, 3, 4]，支持索引、切片、增删改查
+
+    my_list = [1, 2, 3, 4]
+    my_list.append(5)
+    print(my_list[0])  # 输出 1
+
+**- 字典**：键值对结构，{"name": "Cindy", "age": 25}
+
+    my_dict = {"name": "Cindy", "age": 25}
+    print(my_dict["name"])  # 输出 Cindy
+
+### 6. 函数
+
+**- 定义函数**：def 关键字
+
+    def greet(name):
+        print(f"Hello, {name}")
+    greet("Cindy")
+
+### 7. 模块与导入
+
+**- 使用 import 导入标准库或第三方库**
+
+    import math
+    print(math.sqrt(16))  # 输出 4.0
+
+### 8. 异常处理
+
+**- 使用 try/except 语句处理异常**
+
+    try:
+        x = 10 / 0
+    except ZeroDivisionError:
+        print("除数不能为零")
+
+### 9. 列表推导式与字典推导式
+
+**- 列表推导式**：快速生成列表
+
+    squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+
+**- 字典推导式**：生成字典
+
+    square_dict = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+### 10. 文件操作
+
+**- 打开文件并读取、写入**
+
+    with open("file.txt", "r") as file:
+        content = file.read()
+        print(content)
+
+### 11. 常用标准库
+
+**- datetime**：日期和时间操作
+
+    import datetime
+    now = datetime.datetime.now()
+    print(now)
+
+**- os**：操作系统相关功能
+
+    import os
+    print(os.getcwd())  # 获取当前工作目录
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
