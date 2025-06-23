@@ -58,7 +58,10 @@
 **- for 循环**：遍历可迭代对象（如列表、字典）
 
     for i in range(5):
-    print(i)
+        print(i)
+    或者
+    for fruit in fruits:
+        print("我喜欢吃", fruit)
 
 **- while 循环**：条件成立时循环执行
 
@@ -67,11 +70,59 @@
 
 ### 5. 列表与字典
 
-**- 列表**：[1, 2, 3, 4]，支持索引、切片、增删改查
+**- 列表**：是一串有顺序的元素，可以包含数字、字符串、布尔值，甚至是列表本身，支持索引、切片、增删改查
 
     my_list = [1, 2, 3, 4]
     my_list.append(5)
     print(my_list[0])  # 输出 1
+
+列表中的每个元素都有编号，叫做索引（index），从 0 开始。
+
+    修改元素：
+    fruits[0] = "桃子"
+
+    添加元素：
+    fruits.append("西瓜")  # 添加到最后
+    fruits.insert(1, "柠檬")  # 在索引 1 的位置插入
+
+    删除元素：
+    fruits.remove("香蕉")  # 按值删除
+    del fruits[0]          # 按索引删除
+
+列表常用方法：
+
+    1. len()：获取列表长度
+    print(len(fruits))  # 计算列表中元素的个数
+    
+    2. .sort()：对列表排序（永久修改）
+    numbers = [5, 3, 8, 1]
+    numbers.sort()
+    print(numbers)  # 输出：[1, 3, 5, 8]
+    
+    3. sorted()：排序，但不修改原列表
+    numbers = [5, 3, 8, 1]
+    new_numbers = sorted(numbers)
+    print(new_numbers)  # [1, 3, 5, 8]
+    print(numbers)      # 原列表仍是 [5, 3, 8, 1]
+
+    4. .reverse()：列表反转（不是排序）
+    fruits = ["苹果", "香蕉", "橘子"]
+    fruits.reverse()
+    print(fruits)  # ['橘子', '香蕉', '苹果']
+
+    5. .count(元素)：统计某个元素出现的次数
+    nums = [1, 2, 3, 2, 4, 2]
+    print(nums.count(2))  # 输出：3
+
+    6. .index(元素)：获取某个元素的第一次出现的位置
+    print(nums.index(3))  # 输出：2
+
+    7. .copy()：复制一个新列表
+    new_fruits = fruits.copy()
+
+    8. .clear()：清空列表
+    fruits.clear()
+    print(fruits)  # 输出：[]
 
 **- 字典**：键值对结构，{"name": "Cindy", "age": 25}
 
