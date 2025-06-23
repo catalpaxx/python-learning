@@ -99,7 +99,7 @@
     numbers.sort()
     print(numbers)  # 输出：[1, 3, 5, 8]
     
-    3. sorted()：排序，但不修改原列表
+    3. sorted()：排序，但不修改原列表，默认是升序排序
     numbers = [5, 3, 8, 1]
     new_numbers = sorted(numbers)
     print(new_numbers)  # [1, 3, 5, 8]
@@ -109,6 +109,9 @@
     fruits = ["苹果", "香蕉", "橘子"]
     fruits.reverse()
     print(fruits)  # ['橘子', '香蕉', '苹果']
+
+    **降序排序**：.sort(reverse=True)
+    eg：my_list.sort(reverse=True)
 
     5. .count(元素)：统计某个元素出现的次数
     nums = [1, 2, 3, 2, 4, 2]
