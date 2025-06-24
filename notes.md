@@ -105,6 +105,8 @@
     print(new_numbers)  # [1, 3, 5, 8]
     print(numbers)      # 原列表仍是 [5, 3, 8, 1]
 
+它们都可以接收一个 key 参数，用来指定排序规则。这个 key 参数是一个函数，它的作用是决定每个元素应该按照什么方式进行排序。
+
     4. .reverse()：列表反转（不是排序）
     fruits = ["苹果", "香蕉", "橘子"]
     fruits.reverse()
@@ -126,6 +128,8 @@
     8. .clear()：清空列表
     fruits.clear()
     print(fruits)  # 输出：[]
+
+
 
 **- 字典**：键值对结构，{"name": "Cindy", "age": 25}
 
