@@ -6,6 +6,53 @@
 
 **- 字符串** (str): name = "Cindy"
 
+    字符串操作基础：
+    1. 拼接：
+    greeting = "Hello, " + "Cindy!"
+    print(greeting)  # 输出: Hello, Cindy!
+    也可以用 join() 来连接多个字符串：
+    words = ["Hello", "Cindy"]
+    greeting = " ".join(words)
+    print(greeting)  # 输出: Hello Cindy
+    
+    2. 提取子串（切片）:
+    text = "Hello, world!"
+    print(text[0:5])  # 输出: Hello
+        text[start:end] 会提取从 start 到 end-1 的字符。如果省略 start，默认从开始处开始；如果省略 end，默认到字符串的末尾。
+
+    3. 字符串大小写转换:
+    message = "hello, Cindy!"
+    print(message.upper())  # 输出: HELLO, CINDY!
+    print(message.lower())  # 输出: hello, cindy!
+
+    4. 去除空格:
+    message = "  Hello, Cindy!  "
+    print(message.strip())  # 输出: Hello, Cindy!
+
+    5. 查找和替换:
+    查找：用 find() 找到子字符串的位置：
+    message = "Hello, Cindy!"
+    print(message.find("Cindy"))  # 输出: 7
+    替换：用 replace() 替换字符串中的部分内容：
+    message = "Hello, Cindy!"
+    print(message.replace("Cindy", "Tom"))  # 输出: Hello, Tom!
+
+    6. 计算字符个数:
+    用 count() 计算某个字符或子字符串在字符串中出现的次数：
+    message = "Hello, Cindy! Cindy is awesome."
+    print(message.count("Cindy"))  # 输出: 2
+
+    7. 首字母大写capitalize() + 每个单词首字母大写title():
+    print(message.capitalize())  # 输出：Good night
+    print(message.title())  # 输出：Good Night
+
+    8. 替换字符串内容replace():
+    print(message.replace("night", "morning"))  # 输出：good morning
+
+    9. 检查子字符串是否存在in:
+    print("night" in message)  # 输出：True
+    print("hello" in message)  # 输出：False
+
 **- 布尔值** (bool)：用于表示逻辑值，它有两个可能的值True/False，常用于条件判断中，比如if语句/循环/逻辑运算。
 
 **- 变量赋值**：x = 5
