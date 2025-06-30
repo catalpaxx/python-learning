@@ -178,10 +178,51 @@
 
 
 
-**- 字典**：键值对结构，{"name": "Cindy", "age": 25}
+**- 字典**：是一种无序的数据结构，它通过 键（key） 来映射 值（value），就像是一个电话簿，键是人名，值是电话号码。
 
-    my_dict = {"name": "Cindy", "age": 25}
-    print(my_dict["name"])  # 输出 Cindy
+    1. 创建字典
+    person = {
+    "name": "Cindy",
+    "age": 25,
+    "email": "cindy@example.com"
+    }
+    print(person)
+
+    person 是字典，包含了三个键值对：name, age, email。字典的键（key）是不可重复的，值（value）可以是任何类型。
+
+    2. 访问字典中的值
+    print(person["name"])  # 输出: Cindy
+    print(person["age"])   # 输出: 25
+
+    3. 添加和修改值
+    person["phone"] = "1234567890"  # 添加新的键值对
+    person["age"] = 26  # 修改已有的键值对
+    print(person)
+
+    如果键已经存在，person["age"] = 26 会更新原来的值。
+    如果键不存在，person["phone"] = "1234567890" 会新增一个键值对。
+
+    4. 删除字典中的键值对
+    del person["email"]  # 删除指定键的键值对
+    print(person)
+
+    5. 遍历字典
+    for key, value in person.items():
+        print(key, ":", value)
+        
+    person.items() 返回一个包含键值对的可迭代对象，for 循环可以用来遍历字典中的所有键值对。
+
+    6. 判断键是否存在
+    if "name" in person:
+        print("Name exists:", person["name"])
+    else:
+        print("Name not found.")
+
+    使用 in 来检查字典中是否包含某个键。
+
+    
+
+
 
 ### 6. 函数
 
