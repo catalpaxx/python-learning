@@ -53,6 +53,13 @@
     print("night" in message)  # 输出：True
     print("hello" in message)  # 输出：False
 
+    10. 格式化字符串（f-string 全称formatted string）：用 f"{}" 来格式化字符串，它的优势在于能够直接在字符串内部嵌入表达式
+    age = 25
+    greeting = f"你好，{name}，今年 {age} 岁"  # f-string 格式化
+    print(greeting)  # 输出: 你好，Cindy，今年 25 岁
+
+    
+
 **- 布尔值** (bool)：用于表示逻辑值，它有两个可能的值True/False，常用于条件判断中，比如if语句/循环/逻辑运算。
 
 **- 变量赋值**：x = 5
