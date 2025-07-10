@@ -227,8 +227,39 @@
 
     使用 in 来检查字典中是否包含某个键。
 
-    
+    7. 字典的合并
+    在 Python 3.9 及以上版本中可以使用 | 运算符来合并两个字典。
+    dict1 = {'a': 1, 'b': 2}
+    dict2 = {'b': 3, 'c': 4}
+    result = dict1 | dict2
+    print(result)
+    在这个例子中，dict1 和 dict2 中的键 b 会被合并，dict2 中的 b 值会覆盖 dict1 中的值。如果键是唯一的，则会直接合并。
 
+    8. get 方法
+    get() 方法可以通过键来获取字典中的值，但它会避免抛出异常，如果键不存在，则返回 None 或指定的默认值。示例：
+    my_dict = {'name': 'Alice', 'age': 25}
+    print(my_dict.get('name'))  # 输出 'Alice'
+    print(my_dict.get('address', 'No Address'))  # 输出 'No Address' 因为 'address' 不存在
+
+    9. setdefault 方法
+    setdefault 方法不仅用于访问字典中的值，还可以在键不存在时为该键设定默认值。示例：
+    my_dict = {'name': 'Alice', 'age': 25}
+    print(my_dict.setdefault('address', 'Unknown'))  # 如果 'address' 不存在，则返回 'Unknown' 并插入 'address': 'Unknown'
+    print(my_dict)
+
+    10. 字典的排序
+    字典本身是无序的，但你可以对字典的键或值进行排序。示例：
+    my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+    sorted_dict_by_keys = dict(sorted(my_dict.items()))  # 按键排序
+    sorted_dict_by_values = dict(sorted(my_dict.items(), key=lambda item: item[1]))  # 按值排序
+    print(sorted_dict_by_keys)
+    print(sorted_dict_by_values)
+
+    11. 字典推导式
+    字典推导式允许你以一种简洁的方式创建新的字典。示例：
+    my_dict = {x: x**2 for x in range(5)}
+    print(my_dict)
+    这会创建一个字典，其中每个键是一个数字，值是该数字的平方。
 
 
 ### 6. 函数
