@@ -58,6 +58,21 @@
     greeting = f"你好，{name}，今年 {age} 岁"  # f-string 格式化
     print(greeting)  # 输出: 你好，Cindy，今年 25 岁
 
+**- 元组 Tuple**：一个不可变的、序列化的数据结构，通常用圆括号 () 表示。
+
+    1. 创建元组：
+    my_tuple = (1, 2, 3, 4)
+    
+    2. 访问元组中的元素：
+    print(my_tuple[0])  # 输出：1
+    
+    3. 元组解包：
+    a, b, c = my_tuple
+    print(a, b, c)  # 输出：1 2 3
+    
+    4. 元组与列表的区别：
+    元组是不可变的（immutable），而列表是可变的（mutable）。
+    元组通常用于存储不需要修改的数据。
     
 
 **- 布尔值** (bool)：用于表示逻辑值，它有两个可能的值True/False，常用于条件判断中，比如if语句/循环/逻辑运算。
