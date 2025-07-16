@@ -25,9 +25,11 @@
     print(message.upper())  # 输出: HELLO, CINDY!
     print(message.lower())  # 输出: hello, cindy!
 
-    4. 去除空格:
+    4. 去除 空格/标点符号:
     message = "  Hello, Cindy!  "
     print(message.strip())  # 输出: Hello, Cindy!
+
+    
 
     5. 查找和替换:
     查找：用 find() 找到子字符串的位置：
