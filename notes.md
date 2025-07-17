@@ -29,8 +29,6 @@
     message = "  Hello, Cindy!  "
     print(message.strip())  # 输出: Hello, Cindy!
 
-    
-
     5. 查找和替换:
     查找：用 find() 找到子字符串的位置：
     message = "Hello, Cindy!"
@@ -59,6 +57,41 @@
     age = 25
     greeting = f"你好，{name}，今年 {age} 岁"  # f-string 格式化
     print(greeting)  # 输出: 你好，Cindy，今年 25 岁
+
+    11. **正则表达式（Regular Expressions）**
+    正则表达式是一个强大的字符串匹配工具，常用于文本的模式匹配、查找、替换和验证。
+    
+    基本语法：
+    .：匹配任意单个字符（除了换行符）。
+    ^：匹配字符串的开头。
+    $：匹配字符串的结尾。
+    []：匹配括号内的任意字符。
+    *：匹配前面的元素零次或多次。
+    +：匹配前面的元素一次或多次。
+    ?：匹配前面的元素零次或一次。
+    |：匹配左边或右边的表达式。
+    \d：匹配一个数字。
+    \w：匹配一个字母、数字或下划线。
+    
+    常见应用
+    查找文本中的模式：
+    import re
+    text = "abc 123 def"
+    pattern = r"\d+"  # 匹配一个或多个数字
+    matches = re.findall(pattern, text)
+    print(matches)  # 输出: ['123']
+    替换文本中的匹配项：
+    text = "My email is abc@example.com"
+    pattern = r"\S+@\S+"  # 匹配邮箱地址
+    replaced_text = re.sub(pattern, "REDACTED", text)
+    print(replaced_text)  # 输出: My email is REDACTED
+    验证字符串格式：
+    email = "test@example.com"
+    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    if re.match(pattern, email):
+        print("Valid email!")
+    else:
+        print("Invalid email!")
 
 **- 元组 Tuple**：一个不可变的、序列化的数据结构，通常用圆括号 () 表示。
 
