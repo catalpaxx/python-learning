@@ -357,11 +357,19 @@
 ### 10. 文件操作
 
 **- 打开文件并读取、写入**
+Python 提供了内置的 open() 函数来打开文件，常用的文件操作包括：
 
-    with open("file.txt", "r") as file:
-        content = file.read()
-        print(content)
+    读取文件内容：read(), readline(), readlines()
+    写入文件：write(), writelines()
+    关闭文件：close()
 
+常用的打开模式：
+    'r'：只读模式（默认模式）。
+    'w'：写模式（如果文件存在会覆盖，如果不存在会创建新文件）。
+    'a'：追加模式（在文件末尾添加内容）。
+    'rb' 或 'wb'：以二进制模式读写文件。
+
+    
 ### 11. 常用标准库
 
 **- datetime**：日期和时间操作
