@@ -362,12 +362,47 @@ Python 提供了内置的 open() 函数来打开文件，常用的文件操作�
     读取文件内容：read(), readline(), readlines()
     写入文件：write(), writelines()
     关闭文件：close()
-
+    
 常用的打开模式：
+
+    file = open('file.txt', 'w')
+    
     'r'：只读模式（默认模式）。
     'w'：写模式（如果文件存在会覆盖，如果不存在会创建新文件）。
     'a'：追加模式（在文件末尾添加内容）。
     'rb' 或 'wb'：以二进制模式读写文件。
+
+写入文件（write）：
+
+    file = open('file.txt', 'w')  # 打开文件（写入模式）
+    file.write("Hello, world!")  # 向文件中写入字符串
+    file.close()  # 关闭文件
+
+读取文件（read）：会读取整个文件的内容，返回一个字符串。
+
+    file = open('file.txt', 'r')  # 打开文件（读模式）
+    content = file.read()  # 读取文件中的所有内容
+    print(content)  # 输出文件内容
+    file.close()  # 关闭文件
+
+逐行读取文件（readline）如果文件非常大，可以逐行读取文件，而不是一次性读取所有内容：
+
+    file = open('file.txt', 'r')
+    line = file.readline()  # 读取文件的第一行
+    print(line)
+    file.close()
+
+读取所有行（readlines）
+
+    file = open('file.txt', 'r')
+    lines = file.readlines()  # 读取所有行并返回一个列表
+    print(lines)  # 输出所有行
+    file.close()
+
+自动关闭文件（with 语句）
+
+    with open('file.txt', 'w') as file:
+        file.write("Hello, world!")  # 文件操作后，文件会自动关闭
 
     
 ### 11. 常用标准库
