@@ -350,9 +350,13 @@
 
     squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
 
-**- 字典推导式**：生成字典
+**- 字典推导式**：是一种简洁的方式来创建字典。它类似于列表推导式，但用于字典的创建，允许你在一行代码中生成一个字典。
 
-    square_dict = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+    {key_expression: value_expression for item in iterable}
+
+key_expression 是字典的键的表达式。
+value_expression 是字典的值的表达式。
+iterable 是一个可迭代对象（比如列表、元组、范围等）。
 
 ### 10. 文件操作
 
