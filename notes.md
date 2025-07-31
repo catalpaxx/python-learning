@@ -449,11 +449,17 @@ issuperset(): 判断一个集合是否是另一个集合的超集。
 
 **- 字典推导式**：是一种简洁的方式来创建字典。它类似于列表推导式，但用于字典的创建，允许你在一行代码中生成一个字典。
 
-    {key_expression: value_expression for item in iterable}
+基本语法
 
-key_expression 是字典的键的表达式。
-value_expression 是字典的值的表达式。
-iterable 是一个可迭代对象（比如列表、元组、范围等）。
+    [expression for item in iterable if condition]
+
+expression：对每个元素应用的操作，生成列表的元素。
+
+item：从可迭代对象（如列表、元组等）中提取的元素。
+
+iterable：可迭代对象（如列表、字符串、范围等）。
+
+condition：可选的条件，如果满足条件则加入列表。
 
 ### 11. 文件操作
 
