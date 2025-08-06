@@ -20,7 +20,7 @@
     print(text[0:5])  # 输出: Hello
         text[start:end] 会提取从 start 到 end-1 的字符。如果省略 start，默认从开始处开始；如果省略 end，默认到字符串的末尾。
 
-    3. 字符串大小写转换:
+    3. 字符串大小写转换:lower() 和 upper()
     message = "hello, Cindy!"
     print(message.upper())  # 输出: HELLO, CINDY!
     print(message.lower())  # 输出: hello, cindy!
@@ -93,6 +93,21 @@
     else:
         print("Invalid email!")
 
+    12. strip()用于去除字符串两端的空白字符（包括空格、换行符等）。
+    text = "  Hello, World!  "
+    cleaned_text = text.strip()
+    print(cleaned_text)  # "Hello, World!"
+
+    13. split()将字符串根据指定的分隔符拆分成一个列表。
+    text = "apple,banana,orange"
+    fruits = text.split(",")
+    print(fruits)  # ['apple', 'banana', 'orange']
+
+    14. join()用于将字符串列表连接成一个字符串。
+    fruits = ["apple", "banana", "orange"]
+    result = ", ".join(fruits)
+    print(result)  # "apple, banana, orange"
+    
 **- 元组 Tuple**：一个不可变的、序列化的数据结构，通常用圆括号 () 表示。
 
     1. 创建元组：
