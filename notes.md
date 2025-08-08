@@ -218,7 +218,7 @@
 
 列表常用方法：
 
-    1. len()：获取列表长度
+    1. .len()：获取列表长度
     print(len(fruits))  # 计算列表中元素的个数
     
     2. .sort()：对列表排序（永久修改）
@@ -255,6 +255,12 @@
     8. .clear()：清空列表
     fruits.clear()
     print(fruits)  # 输出：[]
+
+    9. 使用+运算符将两个列表合并
+    list1 = [1, 2]
+    list2 = [3, 4]
+    combined = list1 + list2
+    print(combined)  # 输出 [1, 2, 3, 4]
 
 
 
