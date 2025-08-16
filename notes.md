@@ -474,9 +474,19 @@ issuperset(): 判断一个集合是否是另一个集合的超集。
 
 ### 10. 列表推导式与字典推导式
 
-**- 列表推导式**：快速生成列表
+**- 列表推导式**：列表推导式是Python中非常简洁的写法，它可以用来创建新的列表，并对原有列表进行操作。常见的形式是：
 
-    squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+    new_list = [expression for item in iterable if condition]
+
+expression: 表达式，生成新列表的内容。
+iterable: 可迭代对象（例如：列表、元组、字符串等）。
+condition: 可选的条件，过滤掉不符合条件的元素。
+
+例如：
+
+    numbers = [1, 2, 3, 4, 5]
+    squares = [x**2 for x in numbers]
+    print(squares)  # [1, 4, 9, 16, 25]
 
 **- 字典推导式**：是一种简洁的方式来创建字典。它类似于列表推导式，但用于字典的创建，允许你在一行代码中生成一个字典。
 
